@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Polynomial functions and graphs</title>
+    <meta name="description" content="Polynomial functions and graphs">
+	<meta name="keywords" content="polynomials functions, graphs, mathematics with canvas">
+	<meta name="keywords" content="mathematics extension 2, 4 unit maths, 4 unit mathematics">
+	<meta name="author" content="Ian Cooper">
+	<link rel="stylesheet" type = "text/css" href="style_001.css" />
+   
+   <style>  #myCanvas
+      {
+         border: 1px solid black;
+		 display : block;
+         margin : auto;
+      }
+   </style>
+   
+   <style> .s4
+
+color : blue;
+
+/* unvisited link */
+a:link {color: blue;}
+
+/* visited link */
+a:visited {color: blue;}
+
+/* mouse over link */
+a:hover {color: #FF00FF; background-color: #ffd9d9;}
+
+/* selected link */
+a:active {color: #0000FF;}
+
+a {text-decoration: none; color: #000000}
+
+</style>
+
+   
+   <script src="sim_poly.js"> </script>
+</head>
+
+ 
+<body onload="init();">
+    <p></p>
+	<br>
+<section class = "s5" align = "center">	
+	<a class = "s4"  href = "http://www.physics.usyd.edu.au/teach_res/hsp/sim/sim_poly.pdf">&nbsp &nbsp POLYNOMIALS &nbsp (view activity questions)</a> 
+<br>
+<div style ="font-size:18px">
+<p style = "padding-left:20px">The equation of a polynomial of degree 4 can be written as</p>
+<p style = "padding-left:20px">y  =  a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup> + a<sub>3</sub>x<sup>3</sup> + a<sub>4</sub>x<sup>4</sup></p>
+<p style = "padding-left:20px">Investigate the graphs of polynomial up to degree 4 by changing the <Stong>a</Stong> coefficents.</p>
+</div>
+    <canvas id="myCanvas" width="800" height="450">
+            Your browser does not support the canvas tag.
+    </canvas>
+</section>	
+
+
+<div  style ="font-size:18px" align = "left">
+    <label for="control_rows">a<sub>0</sub></label>
+    <input type="number" id="control_a0" name="control_a0" step = "1" min="-100" max="100" value="2" />
+	
+	<label for="control_rows">a<sub>1</sub></label>
+    <input type="number" id="control_a1" name="control_a1" min="-100" max="100" value="0" />
+	
+	<label for="control_rows">a<sub>2</sub></label>
+    <input type="number" id="control_a2" name="control_a2" min="-100" max="100" value="1" />
+	
+	<label for="control_rows">a<sub>3</sub></label>
+    <input type="number" id="control_a3" name="control_a3" min="-100" max="100" value="0" />
+	
+	<label for="control_rows">a<sub>4</sub></label>
+    <input type="number" id="control_a4" name="control_a4" min="-100" max="100" value="0" />
+	<br>
+	
+	<label for="control_rows">x<sub>max</sub></label>
+    <input type="number" id="control_xMax" name="control_xMax" min="0" max="100" value="10" />
+	
+	<label for="control_rows">y<sub>max</sub></label>
+    <input type="number" id="control_yMax" name="control_yMax" min="0" max="1000" value="10" />
+	
+	<input type="button" id="calc_button" name="calc_button" value="PLOT" onclick="plot()">
+</div>
+
+	
+</body>
+
+</html>
